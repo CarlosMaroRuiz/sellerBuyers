@@ -3,3 +3,6 @@ python-dotenv~=1.0.1
 fastapi~=0.115.6
 python-jose~=3.3.0
 pydantic~=2.10.3
+gunicorn
+pymysql
+pydantic[email]

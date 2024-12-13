@@ -22,3 +22,4 @@ app.include_router(router_seller)
 app.include_router(router_auth_buyer)
 app.include_router(router_auth_seller)
 app.include_router(router_product)
+#gunicorn -w 2 -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:5000 --daemon
