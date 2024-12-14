@@ -75,7 +75,7 @@ def buy_product(
 
         result = buy_product_services(
             db,
-            product_request.name,
+            product_request.productId,
             product_request.quantity
         )
         return result

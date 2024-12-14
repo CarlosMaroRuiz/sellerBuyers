@@ -35,13 +35,13 @@ class ProductDAO:
             )
 
     @staticmethod
-    def get_product_by_name(db: Session, product_name: str) -> Product:
+    def get_product_by_id(db: Session, product_id:int) -> Product:
         try:
-            product = db.query(Product).filter(Product.name == product_name).first()
+            product = db.query(Product).filter(Product.id == product_id).first()
             if not product:
                 raise CustomAppException(
                     code_error=404,
-                    msg=f"Producto con nombre '{product_name}' no encontrado."
+                    msg=f"Producto no encontrado."
                 )
             return product
         except Exception as e:

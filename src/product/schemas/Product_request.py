@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 
 class Product_request(BaseModel):
-    name: str
+    productId:int
     quantity: int
 
     class Config:

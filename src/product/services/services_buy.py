@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from src.product.dao_product import ProductDAO
 from src.shared.utils.custom_exeption import CustomAppException
 
-def buy_product_services(db: Session, product_name: str, quantity: int) -> dict:
+def buy_product_services(db: Session, product_id: str, quantity: int) -> dict:
     try:
 
         product = ProductDAO.get_product_by_name(db, product_name)
