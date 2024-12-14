@@ -5,7 +5,7 @@ from src.shared.utils.custom_exeption import CustomAppException
 def buy_product_services(db: Session, product_id: str, quantity: int) -> dict:
     try:
 
-        product = ProductDAO.get_product_by_name(db, product_name)
+        product = ProductDAO.get_product_by_name(db, product_id)
         result = ProductDAO.reduce_product_stock(db, product, quantity)
 
         return {
